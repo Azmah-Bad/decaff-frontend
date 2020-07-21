@@ -1,0 +1,56 @@
+.caff{  
+    position: relative;
+    font-family: Georgia, Times, "Times New Roman";
+    font-style: italic;
+    font-weight: normal;
+    font-size: 36px;
+    line-height: 41px;
+    /* identical to box height */
+    color: #EB5E28;
+    margin: 1em;
+    
+    }
+    
+    h2{
+      /* Today you’ve had x mg of caffeine ️ */
+    
+    
+    position: relative;
+    /* width: 80%; */
+    // height: 54px;
+    left: 20px;
+    right: 20px;
+    top: 20px;
+    
+    font-family: Georgia;
+    font-style: italic;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 27px;
+    
+    color: #EB5E28;
+    }
+    
+    
+    button
+    {
+      /* tap_to_log_buttton 1 */
+    position: relative;
+    width: 97px;
+    height: 113px;
+    top: 80px;
+    /* left: calc(50% - (97px/2)); */
+    border: none;
+    border-radius: 52px;
+    }
+    
+    .cute_coffee {
+      left: 20%;
+      background: url(src/assets/images/tap_to_log_buttton.png);
+    }
+    .cute_coke{
+      left: 40%;
+      background: url(src/assets/images/cute_soda_can.png);
+      width: 80px;
+    }
+    

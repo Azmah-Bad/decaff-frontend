@@ -1,17 +1,12 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>
-      Tab 1
-    </ion-title>
-  </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+  <h1 class="caff">Caffeinate</h1>
+  <h2>Today you’ve had {{caffeineIntakeToday}} mg of caffeine</h2>
+  <button class="cute_coffee" (click)="LogCuteCoffee('espresso')"></button><!-- TODO :: expand this-->
+  <button class="cute_coke" (click)="LogCuteCoffee('coke')"></button>
 
-  <app-explore-container name="Tab 1 page"></app-explore-container>
+
+
 </ion-content>
