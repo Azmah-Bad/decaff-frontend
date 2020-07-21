@@ -8,7 +8,7 @@ the app is built with ionic/angular in the frontend which make it avalible on th
 
 the app home page contains the caffeine intake of the day with 2 _cute_ buttons that the user will press when he drinks soda or coffee (maybe add energy drinks later on)
 
-![home page](http://url/to/img.png)
+![home page](https://github.com/Azmah-Bad/decaf-frontend/blob/master/Screenshot%202020-07-22%20at%2001.02.49.png)
 
 app should warn the user by playing dancing coffin ⚰️ song when user had too much caffeine 
 
