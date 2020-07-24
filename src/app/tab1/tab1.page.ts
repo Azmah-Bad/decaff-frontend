@@ -38,8 +38,7 @@ export class Tab1Page implements OnInit {
   LogCuteCoffee(cup: string): void {
     this.caffeineIntakeToday += this.cup2caffeine[cup];
     //TODO :: push this data into a db
-    let time = new Date();
-    
+    this.coffeeService.newIntake(this.cup2caffeine[cup],this.userID);    
     // Dancing coffee easter egg
     if (this.caffeineIntakeToday > 200) {
       // this.audioService.play();

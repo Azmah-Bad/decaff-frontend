@@ -22,5 +22,29 @@ export class CoffeeService {
 
   }
 
+  newIntake(caffeine: number, userID: number) {
+    let time = this.timeFormatter(new Date());
+    let url = this.api + `/userID/${userID}/caffeine/${caffeine}/TIME/${time}`;
+
+    this.http.post(url, null,{headers: new HttpHeaders({ 'Content-Type': 'text' })}).subscribe(() => {
+      console.log("posted")
+    });
+  }
+
+  timeFormatter(date):string {
+      return date.getFullYear()
+                + '-' + this.leftpad(date.getMonth() + 1, 2)
+                + '-' + this.leftpad(date.getDate(), 2)
+                + '%20' + this.leftpad(date.getHours(), 2)
+                + ':' + this.leftpad(date.getMinutes(), 2)
+                + ':' + this.leftpad(date.getSeconds(), 2);
+    
+  }
+
+  leftpad(val, resultLength = 2, leftpadChar = '0'): string {
+    return (String(leftpadChar).repeat(resultLength)
+          + String(val)).slice(String(val).length);
+  }
+
 
 }
