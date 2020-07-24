@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from "ngx-cookie-service";
 import { generate } from 'rxjs';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { CoffeeService } from "../coffee.service";
 
 @Component({
   selector: 'app-tab1',
@@ -11,15 +11,14 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class Tab1Page implements OnInit {
   caffeineIntakeToday = 0;
   private cup2caffeine = { "espresso": 64, "coke": 22 } // in mg
-  private api = "localhost:3000/api";
   private USERID_KEY = "userID";
   private MAX_USERID = 10000;
-  public userID: Number;
+  public userID: number;
 
 
   constructor(
     private cookiewithyoucoffee: CookieService,
-    private http: HttpClient
+    private coffeeService: CoffeeService
   ) { }
   
   ngOnInit() {
@@ -27,7 +26,9 @@ export class Tab1Page implements OnInit {
     if (this.cookiewithyoucoffee.check(this.USERID_KEY)) {
       this.loadUserID();
       // get caffeine intake in last 24h 
-      
+      this.coffeeService.getCoffeeIntake(this.userID).subscribe((resp) => {
+        this.caffeineIntakeToday = resp.caffeineInLast24h;
+      })
 
     } else {
       this.generateUserID();

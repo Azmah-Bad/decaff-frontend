@@ -1,6 +1,6 @@
 export interface Intake {
-    userID: Number;
-    caffeine: Number;
+    userID: number;
+    caffeine: number;
     time: Date;
 
 }
