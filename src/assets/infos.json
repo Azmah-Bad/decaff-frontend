@@ -1,10 +1,10 @@
 {"statments":{
-    "information": ["too much coffee is bad",
+    "Information": ["too much coffee is bad",
         "some coffee is good",
        "there is 95mg of caffeine in 1 cup of brewed coffee",
        "At high doses, caffeine can produce these common side effects: Diarrhea, Sweating and Increased heart rate"
    ],
-   "warning": ["you have had a bit too much it is not recommended to drink above 300mg of caffeine ☕️",
+   "Warning": ["you have had a bit too much it is not recommended to drink above 300mg of caffeine ☕️",
     "bro, chill"
 ]
 
