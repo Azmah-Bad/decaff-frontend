@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CoffeeService {
-  private api = "http://localhost:3000/api";
+  private api = "http://7eeafd76fc80.ngrok.io/api";
   private KEY_USERID = "userID"
   httpOptions = {
     headers: new HttpHeaders({ 'Content-Type': 'application/json' })
