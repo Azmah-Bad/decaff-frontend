@@ -2,13 +2,16 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <h1 class="caff">Caffeinate</h1>
-  <h2>Today you’ve had {{caffeineIntakeToday}} mg of caffeine</h2>
-  <button class="cute_coffee" (click)="LogCuteCoffee('espresso')"></button><!-- TODO :: expand this-->
-  <button class="cute_coke" (click)="LogCuteCoffee('coke')"></button>
-  <app-info [statementTitle]="statementTitle" [statementBody]=statementBody></app-info>
-  <ion-progress-bar value="{{progressBarValue}}"></ion-progress-bar>
-  <img src="../../assets/images/achievement_pfr.png" class="achievement" *ngIf="caffeineIntakeToday>PFR_BAR">
+  <div>
+    <h1 class="caff">Caffeinate</h1>
+    <h2>Today you’ve had {{caffeineIntakeToday}} mg of caffeine</h2>
+    <button class="cute_coffee" (click)="LogCuteCoffee('espresso')"></button><!-- TODO :: expand this-->
+    <button class="cute_coke" (click)="LogCuteCoffee('coke')"></button>
+    <app-info [statementTitle]="statementTitle" [statementBody]=statementBody></app-info>
+    <ion-progress-bar value="{{progressBarValue}}"></ion-progress-bar>
+    <img src="../../assets/images/achievement_pfr.png" class="achievement" *ngIf="caffeineIntakeToday>PFR_BAR">
+  
+  </div>
 
 
 </ion-content>

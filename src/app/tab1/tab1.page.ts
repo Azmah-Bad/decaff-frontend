@@ -44,6 +44,7 @@ export class Tab1Page implements OnInit {
     }
 
     this.updateStatment("Information");
+
   }
 
   LogCuteCoffee(cup: string): void {
