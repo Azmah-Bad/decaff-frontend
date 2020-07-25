@@ -23,7 +23,7 @@ export class CoffeeService {
   }
 
   newIntake(caffeine: number, userID: number) {
-    let time = this.timeFormatter(new Date());
+    let time = this.timeFormatter(new Date());    
     let url = this.api + `/userID/${userID}/caffeine/${caffeine}/TIME/${time}`;
 
     this.http.post(url, null,{headers: new HttpHeaders({ 'Content-Type': 'text' })}).subscribe(() => {

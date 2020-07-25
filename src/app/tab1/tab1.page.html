@@ -6,7 +6,7 @@
   <h2>Today you’ve had {{caffeineIntakeToday}} mg of caffeine</h2>
   <button class="cute_coffee" (click)="LogCuteCoffee('espresso')"></button><!-- TODO :: expand this-->
   <button class="cute_coke" (click)="LogCuteCoffee('coke')"></button>
-
-
+  <app-info [statement]="status"></app-info>
+  <ion-progress-bar value="{{progressBarValue}}"></ion-progress-bar>
 
 </ion-content>
