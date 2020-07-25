@@ -11,17 +11,19 @@ import { CoffeeService } from "../coffee.service";
 export class Tab1Page implements OnInit {
   caffeineIntakeToday = 0;
   private cup2caffeine = { "espresso": 64, "coke": 22 } // in mg
+  public PFR_BAR = this.cup2caffeine["espresso"] * 7 // private joke
   private USERID_KEY = "userID";
   private MAX_USERID = 10000;
   private MAX_CAFFEINE_PER_DAY = 300;
   public userID: number;
+  private DANCING_COFFIN = "../../assets/sound/too_much_coffee.mp3"// private joke
   status = "information";
   progressBarValue = 0;
 
 
   constructor(
-    private cookiewithyoucoffee: CookieService,
-    private coffeeService: CoffeeService
+    private cookiewithyoucoffee: CookieService,// come on the name is dope
+    private coffeeService: CoffeeService // need sugar/milk service and will be perfect 
   ) { }
   
   ngOnInit() {
@@ -45,7 +47,11 @@ export class Tab1Page implements OnInit {
     this.coffeeService.newIntake(this.cup2caffeine[cup], this.userID);    
     this.updateProgressBar();
     if (this.caffeineIntakeToday > this.MAX_CAFFEINE_PER_DAY) {
-      status="warning";
+      status = "warning";
+    }
+    if (this.caffeineIntakeToday > this.PFR_BAR) {
+      this.pfr_acheivement();
+      
     }
   }
 
@@ -60,5 +66,11 @@ export class Tab1Page implements OnInit {
 
   updateProgressBar() {
     this.progressBarValue = this.caffeineIntakeToday / this.MAX_CAFFEINE_PER_DAY
+  }
+
+  pfr_acheivement() {
+    var audio = new Audio(this.DANCING_COFFIN);
+    audio.play();
+    console.log("👨🏿‍✈️👨🏿‍✈️⚰️👨🏿‍✈️👨🏿‍✈️")
   }
 }

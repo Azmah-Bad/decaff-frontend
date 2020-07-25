@@ -1,3 +1,24 @@
+.achievement{
+  position: absolute;
+  // top: 20px;
+  left: 20%;
+  // animation-name: sickAssTransition;
+  // animation-duration: 4s;
+  // animation-timing-function: ease;
+  animation: sickAssTransition 8s ease 0s 1 forwards;
+
+  @keyframes sickAssTransition {
+    0% {top: -60px}
+    40% {top: 20px;}
+    60% {top: 20px;}
+    100% {top: -60px; visibility: hidden;}
+
+  }
+
+  
+}
+
+
 .caff{  
     position: relative;
     font-family: Georgia, Times, "Times New Roman";
@@ -62,3 +83,4 @@
       position: fixed;
       bottom: 0px;
     }
+

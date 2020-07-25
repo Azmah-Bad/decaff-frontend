@@ -8,5 +8,7 @@
   <button class="cute_coke" (click)="LogCuteCoffee('coke')"></button>
   <app-info [statement]="status"></app-info>
   <ion-progress-bar value="{{progressBarValue}}"></ion-progress-bar>
+  <img src="../../assets/images/achievement_pfr.png" class="achievement" *ngIf="caffeineIntakeToday>PFR_BAR">
+
 
 </ion-content>

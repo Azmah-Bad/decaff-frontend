@@ -8,7 +8,6 @@ import { statments } from "../../../assets/infos.json";
   styleUrls: ['./info.component.scss'],
 })
 export class InfoComponent implements OnInit {
-  private json = ""
 
   statement_title = "Information";
   statement_text = "";
